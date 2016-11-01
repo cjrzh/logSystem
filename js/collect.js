@@ -8,15 +8,15 @@ function httpPost(jsonStr) {
 		}
 	}
 	console.log(jsonStr);
-	xhr.open("POST", "http://localhost:8080", true);
-	xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+	xhr.open("POST", "/logSystem/log", true);
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=utf-8");
 	xhr.send(jsonStr);
 }
 
 function postClick(url) {
 	// body...
 	var postData = {
-		"username": "admin",
+		"username": "张翼",
 		"action": "click",
 		"url": url
 	};
